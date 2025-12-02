@@ -1,0 +1,294 @@
+   /* CSS Variables for Colors */
+   *{
+    box-sizing: border-box;
+   }    
+         :root {
+            --color-light-bg: #d9f0ee;
+            --color-dark-teal: #11afaf;
+            --color-bright-teal: #0fa5a0;
+            --color-red: #dc2626;
+            --color-gray-text: #4b5563;
+            --color-gray-border: #d1d5db;
+        }
+
+        /* 1. Global Setup */
+        body {
+            /* Standard Mobile Font */
+            font-family: 'Times New Roman', Times, serif; 
+            background-color: var(--color-light-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /* 2. Custom Keyframes and Classes */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.1; }
+        }
+        
+        .blinking-text {
+            animation: blink 2s infinite;
+            color:green;
+            font-size:x-large;
+            margin: 0;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header-text-color {
+            color: var(--color-dark-teal);
+        }
+        
+        /* 3. Layout Containers */
+        
+        /* Top Teal Strip */
+        .top-strip {
+            background-color: var(--color-bright-teal);
+            width: 100%;
+            height: 4px; /* h-1 equivalent */
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            border-bottom: 1px solid var(--color-gray-border);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 1rem; /* py-4 */
+            padding-bottom: 1.5rem; 
+            flex-grow: 1; /* flex-grow */
+            /* height: 65vh; */
+            margin-bottom: 0;
+        }
+        
+        .card-wrapper {
+            /* max-width: 384px; sm:max-w-sm */
+            width: 90%; /* Adjust to ensure centering on smaller screens */
+            margin-left: auto;
+            margin-right: auto;
+            /* height: 90vh; */
+        }
+
+        /* 4. Bus Pass Card */
+        .bus-pass-card {
+            background: url('resouces/dtw.png');
+            /* background-color: white; */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-xl */
+            overflow: hidden;
+            position: relative;
+            border: 1px solid var(--color-gray-border);
+            /* height: vh; */
+            width: 100%;
+            
+        }
+
+        .card-content {
+            /* width:100%; */
+            /* padding: 0 1.25rem;  */
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Watermark */
+        .watermark {
+            /* background-image: url('resources\bg.png');  */
+            background-repeat: repeat;
+            background-size: 100px;
+            opacity: 0.7; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+            transform: rotate(-10deg); 
+        }
+        
+        /* 5. Photo Styling */
+        .photo-area {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .photo-container {
+            width: 190px; /* w-32 */
+            height: 210px; /* h-40 */
+            border: 1px solid var(--color-gray-border);
+            padding: 4px; /* p-1 */
+            /* background-color: #f9fafb;  */
+            position: relative;
+            display: inline-block; 
+            /* opacity: 0; */
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 10;
+            opacity: 0.6;
+        }
+        .photo-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background-color: white; */
+            opacity: 0.1; 
+            z-index: 5;
+        }
+
+        /* 6. Text Details */
+        .dtc-header {
+            font-size:1.3rem; /* text-base */
+            font-weight:900; /* font-extrabold */
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--color-dark-teal);
+            /* letter-spacing: 0.05em; */
+            border-bottom: 1px solid var(--color-gray-border);
+            padding-bottom: 4px;
+            text-transform:capitalize;
+            text-decoration: underline;
+        }
+        
+       .user-details, .pass-validity {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .user-details > p:first-child {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 1.2rem; /* text-xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* text-gray-800 */
+            text-transform: uppercase;
+            margin-top:0;
+            /* margin-bottom: 0.5rem; */
+        }
+        .user-details > p:last-child {
+            font-size: 1.5rem; /* text-base */
+            color:black;
+            font-weight: 700;
+            color: var(--color-gray-text);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .pass-validity > span:first-child {
+            font-size:1.6rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:700;
+            color: #1f2937;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            /* padding-bottom: 2rem; */
+        }
+        .pass-validity > p {
+            font-size: 1.5rem; /* text-lg */
+            margin: 0.5rem;
+            font-weight: 700;
+            color: var(--color-red);
+             font-family:Arial, Helvetica, sans-serif;
+             padding-top: 0.7rem;
+        }
+
+        /* 7. Signatory & QR Section */
+        .signature-qr-section {
+            display: flex;
+            justify-content: space-around;
+            /* align-items: flex-end; */
+            border-top: 1px solid var(--color-gray-border);
+            /* padding-top: 0.75rem; */
+            width: 100%;
+            height:3%;
+        }
+        
+        .signatory-details {
+            /* text-align: left; */
+            width: 49%; 
+            /* display: flex; */
+            /* flex-flow:row nowrap; */
+            /* flex-direction: column; */
+            /* justify-content:end; */
+            /* transform: scale(0.3); */
+            /* justify-content: flex-end; */
+        }
+        
+        .signatory-details img {
+            /* height: 32px;  */
+            /* width: auto; */
+            width: 60%; 
+            /* margin: auto; */
+            /* margin-bottom: 4px; */
+            margin-top: 1rem;
+            transform:scale(0.7,1);
+            /* border-right: 1px solid var(--color-gray-border); */
+            margin-left: 1rem; 
+        }
+
+        .divider{
+            width:1%;
+            border-left:  1px solid var(--color-gray-border);;
+        }
+        
+        .qr-code-container {
+            width: 50%; /* w-1/4 */
+            /* margin: 0 auto; */
+            padding: 0;
+            display: flex;
+            /* flex-flow: row nowrap;
+            justify-content:end; */
+        }
+        
+        .qr-code-container img {
+            width: 60%;
+            margin:-1rem auto;
+            transform:scale(0.7);
+            /* height: auto; */
+        }
+
+        /* 8. Footer */
+        footer {
+            background-color: var(--color-bright-teal);
+            color: black;
+            /* padding-top: 10vh; */
+            font-weight: 700;
+            /* padding-top: 8rem; */
+            padding-bottom: 9rem;
+            padding-top: 3rem;
+            width: 100%;
+            text-align: center;
+            position:relative;
+            margin-top:0;
+            /* height:25%; */
+        }
+        
+        footer p {
+            font-size: 0.875rem; /* text-sm */
+            position: absolute;
+            top:1rem;
+            width:100%;
+        }

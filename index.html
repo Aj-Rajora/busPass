@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E- Bus Pass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 0. TOP TEAL STRIP -->
+    <!-- <div class="top-strip"></div> -->
+
+    <!-- Top Navigation Bar (Simulated Status Bar Content) -->
+    <header>
+        <div class="header-content">
+            <span class="text-xl font-bold header-text-color uppercase">E- Bus Pass</span>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="card-wrapper">
+
+            <!-- 2. The Bus Pass Card -->
+            <div class="bus-pass-card"> 
+                
+                <!-- Watermark Effect (Uses dtc_watermark.png) -->
+                <!-- <div class="watermark"></div> -->
+
+                <!-- Card Content -->
+                <div class="card-content">
+                    
+                    <!-- DTC Header -->
+                    <h2 class="dtc-header">
+                        DTC And Cluster Bus Pass
+                    </h2>
+
+                    <!-- Photo Section -->
+                    <div class="photo-area">
+                        <div class="photo-container">
+                            <!-- Using local file name 'student_photo.jpg' -->
+                            <img 
+                                src="resouces\AjayPhoto.jpg" 
+                                alt="Student Photo" 
+                                onerror="this.onerror=null;this.src='https://placehold.co/128x160/E0E0E0/333333?text=Photo+Error';"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- User Details -->
+                    <div class="user-details">
+                        <p>AJAY RAJORA</p>
+                        <p>Student All route AC/Non AC</p>
+                    </div>
+
+                    <!-- Pass Number & Validity -->
+                    <div class="pass-validity">
+                        <!-- Blinking effect applied here -->
+                        <span class="pass-no-label">Bus Pass No.</span>
+                        <span class="blinking-text ">7502092571915</span>
+                        <p>
+                            Valid from 03/12/2025 to 02/05/2026
+                        </p>
+                    </div>
+
+                    <!-- Signatory and QR Code -->
+                    <div class="signature-qr-section">
+                        
+                        <!-- Signatory Details -->
+                        <div class="signatory-details">
+                            <!-- Using local file name 'signature.png' -->
+                            <img 
+                                src="resouces\image.png"
+                                alt="Authorized Signatory Signature" 
+                                onerror="this.onerror=null;this.src='https://placehold.co/100x30/FFFFFF/333333?text=Sign+Missing';"
+                            >
+                            <!-- Text based on the clearer uploaded image -->
+                            
+                        </div>
+
+                        <div class="divider"> </div>
+                        <!-- QR Code -->
+                        <div class="qr-code-container">
+                            <!-- Using local file name 'qr_code.png' -->
+                            <img 
+                                src="resouces\image copy.png" 
+                                alt="QR Code" 
+                                onerror="this.onerror=null;this.src='https://placehold.co/100x100/000000/FFFFFF?text=QR+Missing';"
+                            >
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer Strip (Matching the teal bottom bar) -->
+    <footer>
+        <p>Copyright &copy; - Delhi e-Governance Society 2025</p>
+    </footer>
+</body>
+</html>
