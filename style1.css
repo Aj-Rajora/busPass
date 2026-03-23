@@ -1,6 +1,7 @@
    /* CSS Variables for Colors */
    *{
-    box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: hidden;
    }    
          :root {
             --color-light-bg: #d9f0ee;
@@ -16,11 +17,12 @@
             /* Standard Mobile Font */
             font-family: 'Times New Roman', Times, serif; 
             background-color: var(--color-light-bg);
-            min-height: 100vh;
+            max-height: 100vh;
             display: flex;
             flex-direction: column;
             margin: 0;
             padding: 0;
+            /* overflow: hidden; */
 
         }
 
@@ -33,7 +35,7 @@
         .blinking-text {
             animation: blink 2s infinite;
             color:green;
-            font-size:x-large;
+            font-size:1.6rem;
             margin: 0;
             font-weight: 700;
             font-family: Arial, Helvetica, sans-serif;
@@ -49,7 +51,7 @@
         .top-strip {
             background-color: var(--color-bright-teal);
             width: 100%;
-            height: 4px; /* h-1 equivalent */
+            /* height: 4px;  */
         }
         
         /* Header */
@@ -58,11 +60,12 @@
             border-bottom: 1px solid var(--color-gray-border);
             padding-top: 1rem;
             padding-bottom: 1rem;
+            height:10%;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
         
         .header-content {
-            width: 100%;
+            /* width: 100%; */
             padding-left: 1rem;
             padding-right: 1rem; 
             display: flex;
@@ -73,37 +76,38 @@
 
         /* Main Content */
         main {
-            padding-top: 1rem; /* py-4 */
+            padding-top: 4%;
             padding-bottom: 1.5rem; 
-            flex-grow: 1; /* flex-grow */
-            /* height: 65vh; */
-            margin-bottom: 0;
+            /* flex-grow:1;  */
+            height:65%;
+            /* width:90%; */
         }
         
         .card-wrapper {
-            /* max-width: 384px; sm:max-w-sm */
-            width: 90%; /* Adjust to ensure centering on smaller screens */
+            max-width: 500px;
+            width: 95%; /* Adjust to ensure centering on smaller screens */
             margin-left: auto;
             margin-right: auto;
-            /* height: 90vh; */
+            padding:0%;
+            height:100%;
         }
 
         /* 4. Bus Pass Card */
         .bus-pass-card {
             background: url('resouces/dtw.png');
-            /* background-color: white; */
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-xl */
-            overflow: hidden;
+            overflow:hidden;
             position: relative;
             border: 1px solid var(--color-gray-border);
-            /* height: vh; */
             width: 100%;
+            height:100%;
+
             
         }
 
         .card-content {
-            /* width:100%; */
             /* padding: 0 1.25rem;  */
+            width:100%;
             position: relative;
             z-index: 10;
         }
@@ -111,17 +115,17 @@
         /* Watermark */
         .watermark {
             /* background-image: url('resources\bg.png');  */
-            background-repeat: repeat;
-            background-size: 100px;
-            opacity: 0.7; 
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 10;
-            transform: rotate(-10deg); 
+            /* background-repeat: repeat; */
+            /* background-size: 100px; */
+            /* opacity: 0.7;  */
+            /* position: absolute; */
+            /* top: 0; */
+            /* left: 0; */
+            /* width: 100%; */
+            /* height: 100%; */
+            /* pointer-events: none; */
+            /* z-index: 10; */
+            /* transform: rotate(-10deg);  */
         }
         
         /* 5. Photo Styling */
@@ -165,10 +169,12 @@
 
         /* 6. Text Details */
         .dtc-header {
-            font-size:1.3rem; /* text-base */
+            width:100%;
+            max-height:20%;
+            font-size:1.5rem; /* text-base */
             font-weight:900; /* font-extrabold */
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 5%;
             color: var(--color-dark-teal);
             /* letter-spacing: 0.05em; */
             border-bottom: 1px solid var(--color-gray-border);
@@ -177,7 +183,7 @@
             text-decoration: underline;
         }
         
-       .user-details, .pass-validity {
+        .user-details, .pass-validity {
             text-align: center;
             margin-bottom: 1rem;
         }
@@ -191,7 +197,7 @@
             /* margin-bottom: 0.5rem; */
         }
         .user-details > p:last-child {
-            font-size: 1.4rem; /* text-base */
+            font-size: 1.5rem; /* text-base */
             color:black;
             font-weight: 700;
             color: var(--color-gray-text);
@@ -208,7 +214,7 @@
             /* padding-bottom: 2rem; */
         }
         .pass-validity > p {
-            font-size: 1.3rem; /* text-lg */
+            font-size: 1.5rem; /* text-lg */
             margin: 0.5rem;
             font-weight: 700;
             color: var(--color-red);
@@ -277,19 +283,17 @@
             color: black;
             /* padding-top: 10vh; */
             font-weight: 700;
-            /* padding-top: 8rem; */
-            padding-bottom: 9rem;
-            padding-top: 3rem;
+            /* padding-top: 0; */
+            padding:auto;
+            /* padding-bottom: 25%; */
             width: 100%;
+            /* height: 20%; */
             text-align: center;
-            position:relative;
-            margin-top:0;
-            /* height:25%; */
+            margin-top:7%;
+            /* height:25vh; */
+            flex-grow: 1;
         }
         
         footer p {
             font-size: 0.875rem; /* text-sm */
-            position: absolute;
-            top:1rem;
-            width:100%;
         }
